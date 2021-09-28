@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Dictionary</string>
+    <string-array name="language_option">
+        <item>en</item>
+        <item>ar</item>
+    </string-array>
+</resources>
