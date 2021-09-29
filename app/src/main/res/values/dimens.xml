@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <dimen name="textSizeNormal">24dp</dimen>
-    <dimen name="spinnerWidth">64dp</dimen>
-    <dimen name="spinnerHeight">24dp</dimen>
-    <dimen name="margenSmall">16dp</dimen>
-    <dimen name="radiusSmall">4dp</dimen>
+    <dimen name="text_size_normal">24dp</dimen>
+    <dimen name="text_size_large">36dp</dimen>
+    <dimen name="spinner_width">64dp</dimen>
+    <dimen name="spinner_height">24dp</dimen>
+    <dimen name="margen_small">16dp</dimen>
+    <dimen name="radius_small">4dp</dimen>
 </resources>

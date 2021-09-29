@@ -7,6 +7,18 @@
     tools:context=".ui.MainActivity"
     android:background="@color/blue">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/translate_now"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_large"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/text_input"/>
+
+
     <EditText
         android:id="@+id/text_input"
         android:layout_width="wrap_content"
@@ -14,7 +26,7 @@
         android:textColorHint="@color/white"
         android:hint="auto detect"
         android:textColor="@color/white"
-        android:textSize="@dimen/textSizeNormal"
+        android:textSize="@dimen/text_size_normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,7 +38,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/white"
-        android:textSize="@dimen/textSizeNormal"
+        android:textSize="@dimen/text_size_normal"
         app:layout_constraintTop_toBottomOf="@id/text_input"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,12 +47,12 @@
 
     <Spinner
         android:id="@+id/spinner_translate_to"
-        android:layout_width="@dimen/spinnerWidth"
-        android:layout_height="@dimen/spinnerHeight"
+        android:layout_width="@dimen/spinner_width"
+        android:layout_height="@dimen/spinner_height"
         app:layout_constraintTop_toTopOf="@id/text_input"
         app:layout_constraintBottom_toBottomOf="@id/text_input"
         app:layout_constraintStart_toEndOf="@id/text_input"
-        android:layout_marginLeft="@dimen/margenSmall"
+        android:layout_marginLeft="@dimen/margen_small"
         android:background="@drawable/spinner_shape"
         android:popupBackground="@color/blue"/>
 
