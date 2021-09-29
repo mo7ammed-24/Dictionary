@@ -5,16 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.MainActivity"
-    android:background="@color/brandSeconsary">
+    android:background="@color/blue">
 
     <EditText
         android:id="@+id/text_input"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColorHint="@color/white"
-        android:hint="Write Here"
+        android:hint="auto detect"
         android:textColor="@color/white"
-        android:textSize="24sp"
+        android:textSize="@dimen/textSizeNormal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,7 +26,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/white"
-        android:textSize="24sp"
+        android:textSize="@dimen/textSizeNormal"
         app:layout_constraintTop_toBottomOf="@id/text_input"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,14 +35,14 @@
 
     <Spinner
         android:id="@+id/spinner_translate_to"
-        android:layout_width="64dp"
-        android:layout_height="24dp"
+        android:layout_width="@dimen/spinnerWidth"
+        android:layout_height="@dimen/spinnerHeight"
         app:layout_constraintTop_toTopOf="@id/text_input"
         app:layout_constraintBottom_toBottomOf="@id/text_input"
         app:layout_constraintStart_toEndOf="@id/text_input"
-        android:layout_marginLeft="16dp"
+        android:layout_marginLeft="@dimen/margenSmall"
         android:background="@drawable/spinner_shape"
-        android:popupBackground="@color/brandSeconsary"/>
+        android:popupBackground="@color/blue"/>
 
 
 
