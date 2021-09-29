@@ -6,99 +6,44 @@
     android:layout_height="match_parent"
     tools:context=".ui.MainActivity"
     android:background="@color/brandSeconsary">
-    
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/translate_fragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_margin="@dimen/marginMideum"/>
-    <TextView
-        android:id="@+id/text_translate_from"
+
+    <EditText
+        android:id="@+id/text_input"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/marginLarge"
-        android:text="Translate From "
+        android:textColorHint="@color/white"
+        android:hint="Write Here"
         android:textColor="@color/white"
-        android:textSize="@dimen/textSizeMedium"
-        android:textStyle="bold"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <TextView
-        android:id="@+id/text_select_language_from"
+        android:id="@+id/text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="94dp"
-        android:layout_marginStart="@dimen/marginLarge"
-        android:text="Select Language"
         android:textColor="@color/white"
-        android:textSize="@dimen/textSizeSmall"
-        android:textStyle="bold"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@id/text_input"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_translate_from" />
+        android:textColorHint="@color/white"/>
 
-    <Spinner
-        android:id="@+id/spinner_translate_from"
-        android:layout_width="64dp"
-        android:layout_height="24dp"
-        app:layout_constraintTop_toTopOf="@id/text_select_language_from"
-        app:layout_constraintBottom_toBottomOf="@id/text_select_language_from"
-        app:layout_constraintStart_toStartOf="@id/text_select_language_from"
-        android:layout_marginLeft="164dp"
-        android:popupBackground="@color/brandSeconsary"
-        android:background="@drawable/spinner_shape"/>
-
-    <TextView
-        android:id="@+id/text_translate_to"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:text="Translate To "
-        android:textColor="@color/white"
-        android:textSize="@dimen/textSizeMedium"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@id/text_select_language_from"
-        app:layout_constraintStart_toStartOf="@id/text_select_language_from"
-        app:layout_constraintTop_toBottomOf="@id/text_select_language_from" />
-
-    <TextView
-        android:id="@+id/text_select_language_To"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="94dp"
-        android:layout_marginStart="@dimen/marginLarge"
-        android:text="Select Language"
-        android:textColor="@color/white"
-        android:textSize="@dimen/textSizeSmall"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_translate_to" />
 
     <Spinner
         android:id="@+id/spinner_translate_to"
         android:layout_width="64dp"
         android:layout_height="24dp"
-        app:layout_constraintTop_toTopOf="@id/text_select_language_To"
-        app:layout_constraintBottom_toBottomOf="@id/text_select_language_To"
-        app:layout_constraintStart_toStartOf="@id/text_select_language_To"
-        android:layout_marginLeft="164dp"
+        app:layout_constraintTop_toTopOf="@id/text_input"
+        app:layout_constraintBottom_toBottomOf="@id/text_input"
+        app:layout_constraintStart_toEndOf="@id/text_input"
+        android:layout_marginLeft="16dp"
         android:background="@drawable/spinner_shape"
         android:popupBackground="@color/brandSeconsary"/>
 
-    <Button
-        android:id="@+id/start_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="@+id/text_select_language_To"
-        app:layout_constraintStart_toStartOf="@+id/text_select_language_To"
-        app:layout_constraintTop_toBottomOf="@+id/text_select_language_To"
-        android:layout_marginTop="64dp"
-        android:backgroundTint="@color/orangeTeam"
-        android:text="Start"/>
 
 
 

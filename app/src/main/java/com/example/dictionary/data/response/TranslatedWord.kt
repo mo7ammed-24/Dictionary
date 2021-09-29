@@ -1,4 +1,4 @@
-package com.example.dictionary.data
+package com.example.dictionary.data.response
 
 import com.google.gson.annotations.SerializedName
 
