@@ -11,4 +11,9 @@ object Repostry {
         emit(Status.Loading("loading.."))
         emit(Client.getRequest(source,target,reqString))
     }.flowOn(Dispatchers.IO)
+
+    fun returnLanguagesFlow()= flow<Status<Array<LanguageCode>>> {
+        emit(Status.Loading("Loading.."))
+        emit(Client.getLaguage())
+    }.flowOn(Dispatchers.IO)
 }

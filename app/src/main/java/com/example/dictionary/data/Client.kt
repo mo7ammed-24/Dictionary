@@ -23,4 +23,20 @@ object Client {
             Status.Error(response.message)
         }
     }
+
+    fun getLaguage(): Status<Array<LanguageCode>> {
+        val client=OkHttpClient()
+        val request=Request.Builder().url("https://translate.argosopentech.com/languages").build()
+        val response=client.newCall(request).execute()
+        return if (response.isSuccessful){
+            Log.i("Hamada","inside success")
+            val languageObject=Gson().fromJson(response.body?.string(),Array<LanguageCode>::class.java)
+            Status.Success(languageObject)
+        }
+        else{
+            Status.Error(response.message)
+        }
+    }
+
+
 }
