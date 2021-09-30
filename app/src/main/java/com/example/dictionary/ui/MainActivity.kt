@@ -33,11 +33,15 @@ class MainActivity : AppCompatActivity() {
         setSpinnerLanguages()
         getReqWordTranslation()
     }
+
+    // this function to set the item of spinner using api request
     private fun setSpinnerLanguages() {
         lifecycleScope.launch {
             Repostry.returnLanguagesArray().collect(::bindLanguageArray)
         }
     }
+
+    // this function to bind the incoming data to spinner
     private fun bindLanguageArray(langStatus: Status<Array<LanguageArray>>){
         when(langStatus){
             is Status.Error -> Log.i("Hamada","Error in bind language")
@@ -45,10 +49,13 @@ class MainActivity : AppCompatActivity() {
             is Status.Success -> setup(langStatus.data)
         }
     }
+
+    //this function is setup the spinner adapter and it's values and set clickListener
     fun setup(myList: Array<LanguageArray>) {
         setSpinnerAdapter(myList)
         setSpinnerValue(myList)
     }
+
     private fun setSpinnerAdapter(mList: Array<LanguageArray>) {
         val myLangList= mutableListOf<String>()
         mList.forEach { myLangList.add(it.name)}
@@ -57,6 +64,7 @@ class MainActivity : AppCompatActivity() {
             adapter = mAdapter
         }
     }
+
     private fun setSpinnerValue(myList: Array<LanguageArray>) {
         binding?.spinnerTranslateTo?.onItemSelectedListener =object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
@@ -68,6 +76,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    // this function to get required word to translate
     private fun getReqWordTranslation() {
         binding?.textInput?.addTextChangedListener(object : TextWatcher {
             var isTyping = false
@@ -112,12 +121,14 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    //this function to translate required word
     private fun getTranslatedWord(reqString: String) {
         lifecycleScope.launch{
             Repostry.returnTranslationResult(sourceLanguage.toString(), targetLanguage.toString(), reqString).catch { Log.i("Hamada",it.message.toString()) }.collect(::bindDataResult)
         }
     }
 
+    //this function to bind translate result state in textView
     private suspend fun bindDataResult(it: Status<TranslatedWord>) {
         withContext(Dispatchers.Main){
             when(it){
